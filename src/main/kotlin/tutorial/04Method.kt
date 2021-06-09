@@ -67,10 +67,20 @@ fun printPlus(num1: Int, num2: Int) { // Unit은 생략이 가능하네!
 fun plusShort(num1: Int, num2: Int) = num1 + num2
 
 /**
- * 가변 인수
+ * 가변 인수: variable argument
  */
 fun plusMany(vararg nums: Int) {
     for (num in nums) print("$num ") // 반복문은 python이랑 같네
+}
+
+/**
+ * 내부 함수: Inner function
+ */
+fun say(str: String): String {
+    fun makeHelloStr(): String { // 이게 되네?
+        return "Hello "
+    }
+    return makeHelloStr() + str
 }
 
 fun main() {
@@ -87,4 +97,6 @@ fun main() {
     val result3 = plusShort(1, 1)
     println(result3) // 2
     plusMany(1, 2, 3) // 1 2 3
+    println(say("Kotlin")) // Hello Kotlin
+//    say.makeHelloStr() // 이런 식으로 호출은 안 되네
 }
