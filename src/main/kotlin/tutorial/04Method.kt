@@ -17,7 +17,7 @@ fun plus(first: Int, second: Int): Int {
 
 fun plus(first: Int, second: Int?): Int {
     second ?: throw NullPointerException("hi null")
-    return first + second!! // !! : null이 아니다라고 선언해주는 거
+    return first + second!! // !! : null이 아니다라고 선언해주는 거!
 }
 
 /**

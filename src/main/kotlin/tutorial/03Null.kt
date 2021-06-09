@@ -5,7 +5,7 @@ import java.lang.IllegalStateException
 fun main() {
     var a = "1"
     val b = a.toInt() // Int로 형변환
-    val c = "Hello $b" // $를 쓰면 String 안에 변수 넣을 수 있네
+    val c = "Hello $b" // $를 쓰면 String 안에 변수 넣을 수 있네!
 
 //    var nullTest1 : Int = null // Null can not be a value of a non-null type Int
     var nullTest2 : Int? = null // ?를 붙이면 null을 가질 수 있음!
