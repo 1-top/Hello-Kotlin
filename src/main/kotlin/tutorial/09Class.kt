@@ -12,11 +12,13 @@ fun main() {
     student1.eat("Chicken", "Hamburger")
 }
 
-// Constructor 를 이렇게도 쓸 수 있네?!
-open class Car(var name: String, val color: String) { // 앞에 var, val을 적어주지 않아도 에러는 없지만 값을 사용할 수가 없네
+// Constructor 를 이렇게도 쓸 수 있네?! -> Primary Constructor 라고 한다네!
+open class Car(var name: String, val color: String = "white") { // 앞에 var, val을 적어주지 않아도 에러는 없지만 값을 사용할 수가 없네
     // 끝에 쉼표 하나를 남겨 놓을 수도 있다! 이것을 Trailing comma 라고 한다네
     // open: Kotlin에서는 자바와 다르게 기본적으로 클래스와 메서드는 final이다!!
     // -> 따라서 상속 또는 오버라이드를 허용하려면 open 키워드를 붙여야한다.
+    // 접근 제한자를 가지는 주생성자도 가질 수 있다!
+    // -> class Car primary constructor(var name: String) { ... }
 
     //    var price: Long = 0 // 초기화를 안 해주면 에러가 나네
     private var price: Long // private를 이용해서 get, set 전부 사용 못하게 할 수 있고
@@ -36,7 +38,7 @@ open class Car(var name: String, val color: String) { // 앞에 var, val을 적�
         engine = "default engine"
     }
 
-    // 이렇게도 생성자를 만들 수 있다.
+    // 이렇게도 생성자를 만들 수 있다. -> Secondary Constructor 라고 한다.
     constructor(name: String, color: String, price: Long) : this(name, color) { // 여기서는 val, var 입력할 수 없다!
         this.price = price
     }
