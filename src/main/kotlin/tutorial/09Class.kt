@@ -28,7 +28,7 @@ open class Car(var name: String, val color: String = "white") { // 앞에 var, v
      *  filed 라는 키워드로 this.engine 안 써도 된다?!
      */
     var engine: String
-//        get() { return "Engine is $field" } // return type을 적어주지 않아도 된다!
+        //        get() { return "Engine is $field" } // return type을 적어주지 않아도 된다!
         get() = "Engine is $field" // = 으로도 만들 수 있다!
         private set // 이렇게 set을 숨길 수도 있다.
 

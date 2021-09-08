@@ -1,7 +1,5 @@
 package tutorial
 
-import java.lang.IllegalStateException
-
 fun main() {
     var a = "1"
     val b = a.toInt() // Int로 형변환
@@ -19,5 +17,6 @@ fun main() {
     // Elvis operator
     val obj1: Any? = null
     val obj2 = obj1 ?: "hi"
+    println(obj2)
 
 }

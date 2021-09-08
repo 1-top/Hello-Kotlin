@@ -29,4 +29,8 @@ fun main() {
     val lambdaArr1 = Array(10, { 0 }) // size: 10, 0으로 10개 채워진다.
 //    Array(5, { 1; 2; 3; 4; 5 })
     val lambdaArr2 = Array(5) { 1; 2; 3; 4; 5 } // 이렇게 밖으로 빼서 하기도 하네.
+    println("-----------------------")
+//    lambdaArr2.forEach { item -> print(item) }
+//    lambdaArr2.forEach { print(it) } // it이라는 것을 제공해준다.
+    lambdaArr2.forEach(::print) // lambda 형식으로 이렇게도 쓸 수 있다.
 }

@@ -5,8 +5,13 @@ fun main() {
     for (i in a) print("$i ")
     println()
 //    a.forEach { i -> print("$i ") }
+    println("-----------------------------------")
+    a.forEach(::print)
+    println()
     a.forEach { print("$it ") } // it 으로 i -> 를 생략할 수도 있구나!
-    println("\nstep")
+    println()
+    println("-----------------------------------")
+    println("step")
     for (i in 0..10 step 2) print("$i ") // step이라는 것도 있구나. 0 ~ 10
 
     println("\nuntil")
