@@ -10,6 +10,9 @@ fun main() {
 //    car1.color = "yellow" // error val이기 때문에
     val student1 = Student("stu1")
     student1.eat("Chicken", "Hamburger")
+
+    val internalStudent = InternalStudent("Internal Student")
+    println(internalStudent.name)
 }
 
 // Constructor 를 이렇게도 쓸 수 있네?! -> Primary Constructor 라고 한다네!
@@ -63,4 +66,9 @@ class Student(private var name: String) : Person() { // extends 키워드를 사
         food.forEach { println("${this.name} is eating $it") }
     }
 //    override fun say() {} // open method가 아니라서 Override 불가능 하다!
+}
+
+// internal은 같은 모듈 내에서만 접근이 가능하다.
+internal class InternalStudent(val name: String) {
+
 }
