@@ -1,11 +1,14 @@
 package basic
 
-open class Human constructor(val name: String = "Anonymous") {
+//open class Human constructor(val name: String = "Anonymous") {
+open class Human(val name: String = "Anonymous") { // primary constructor에서 constructor 키워드는 생략이 가능하다!
+// 단 private constructor에서 constructor 키워드는 생략이 불가능하다.
 
     init {
         println("$name Human has been born.")
     }
 
+    // Secondary constructor에는 val 또는 var를 사용할 수 없다!
     constructor(name: String, age: Int) : this(name) {
         println("My name is $name and $age years old.")
     }
