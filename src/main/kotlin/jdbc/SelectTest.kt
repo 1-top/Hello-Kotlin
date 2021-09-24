@@ -15,5 +15,4 @@ fun main() {
         println(resultSet.getInt("id"))
         println(resultSet.getString("name"))
     }
-
 }
