@@ -16,9 +16,10 @@ data class Car(val name: String) {
 }
 
 fun main() {
-    val car1 = Car("car1")
-    println(car1.id)
-    CarFactory.cars.addAll(listOf(car1, Car("car1")))
-    println(CarFactory.findById(car1.id))
-    println(CarFactory.findByName(car1.name))
+    val car1 = Car("car1").also { println(it.id) }
+    CarFactory.cars.run {
+        this.addAll(listOf(car1, Car("car1")))
+        CarFactory.findById(car1.id).also { println(it) }
+        CarFactory.findByName(car1.name).also { println(it) }
+    }
 }
