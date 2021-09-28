@@ -11,5 +11,5 @@ fun main() = runBlocking {
         println("World!")
     }
     println("Hello")
-    delay(1002)
+//    delay(1002)  // delay가 없으면 Hello만 찍히고 바로 종료된다.
 }

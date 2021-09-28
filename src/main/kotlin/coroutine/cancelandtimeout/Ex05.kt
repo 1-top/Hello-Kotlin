@@ -20,3 +20,9 @@ fun main() = runBlocking {
     job.cancelAndJoin()
     println("main is quit")
 }
+
+/**
+ * Dispatchers.Unconfined: will work with main thread
+ * Dispatchers.Default: will get dispatched to DefaultDispatcher - GlobalScope 사용한 결과와 같다.
+ * newSingleThreadContext(): will get its own new thread
+ */
