@@ -2,9 +2,11 @@ package basic
 
 fun main() {
     nullCheck()
-    elvisOperationTest()
+    elvisOperationTest(null).also(::println)
     letTest("test@email.com")
     letTest(null)
+    strNullTest(null).also(::println)
+    strNullTest("harry").also(::println)
 }
 
 fun nullCheck() {
@@ -18,14 +20,11 @@ fun nullCheck() {
     println(nullNameUpperCase)
 }
 
-fun elvisOperationTest() {
-    var name: String? = null
-//    var name: String? = "Harry"
-    val str = name?: "name is null" // null일 경우에 name is null 반환.
-    println(str)
-}
+fun elvisOperationTest(str: String?) = str ?: "(ElvisOperationTest) String is null"
 
 fun letTest(email: String?) {
     email?.let { println(it.uppercase()) } // email이 null이 아닐 경우에만 실행한다.
-    email.let { println("그냥 let은 무조건 실행한다.")}
+    email.let { println("그냥 let은 무조건 실행한다.") }
 }
+
+fun strNullTest(str: String?) = str?.uppercase() ?: "String is null"
