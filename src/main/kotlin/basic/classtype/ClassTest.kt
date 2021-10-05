@@ -1,4 +1,4 @@
-package basic
+package basic.classtype
 
 //open class Human constructor(val name: String = "Anonymous") {
 open class Human(val name: String = "Anonymous") { // primary constructor에서 constructor 키워드는 생략이 가능하다!

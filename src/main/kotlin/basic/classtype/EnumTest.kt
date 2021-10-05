@@ -1,6 +1,7 @@
-package basic
+package basic.classtype
 
-import basic.Color.* // import 를 통해 코드를 더 간결하게 만들 수 있다.
+// import 를 통해 코드를 더 간결하게 만들 수 있다.
+import basic.classtype.Color.*
 
 enum class Color(val r: Int, val g: Int, val b: Int) {
     RED(255, 0, 0), ORANGE(255, 165, 0), BLUE(0, 0, 255),

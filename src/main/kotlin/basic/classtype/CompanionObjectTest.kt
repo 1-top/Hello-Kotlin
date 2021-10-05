@@ -1,4 +1,4 @@
-package basic
+package basic.classtype
 
 import java.util.*
 

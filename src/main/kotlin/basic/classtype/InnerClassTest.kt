@@ -1,4 +1,4 @@
-package basic
+package basic.classtype
 
 class AClazz {
     class BClazz(val b: String)

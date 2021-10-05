@@ -1,7 +1,8 @@
-package basic
+package basic.classtype
 
-import basic.Expr.Num
-import basic.Expr.Sum
+import basic.classtype.Expr.Num
+import basic.classtype.Expr.Sum
+
 
 sealed class Expr {
     class Num(val value: Int) : Expr()
