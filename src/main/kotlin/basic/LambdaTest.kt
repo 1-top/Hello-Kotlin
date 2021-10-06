@@ -12,13 +12,21 @@ fun main() {
     simpleInvokeFunc { println("Hello simple lambda") }
 }
 
+//val square: (Int) -> Int = { num: Int -> num * num }
 //val square: (Int) -> Int = { num -> num * num } // parameter 부분은 항상 괄호()를 써야한다. but. return에서는 생략!
 val square = { num: Int -> num * num } // 타입추론 (type inference)
 
-val twoString: (String, String) -> String = { s1: String, s2: String ->
-    print("Hello two params")
-    "$s1 $s2"
-}
+//val twoString: (String, String) -> String = { s1: String, s2: String ->
+//    print("Hello two params")
+//    "$s1 $s2"
+//}
+
+//val twoString: (String, String) -> String = {s1, s2 ->
+//    println("$s1 $s2")
+//    "s1 s2"
+//}
+
+val twoString = { s1: String, s2: String -> "$s1 $s2" }
 
 val twoStringTypeInference = { s1: String, s2: String ->
     println("Hello two params and type inference")
